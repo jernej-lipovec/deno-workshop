@@ -15,7 +15,7 @@ const router = new Router();
 router
   .get("/searches", async (context) => {
     let res = await db.query("SELECT * FROM searches");
-    context.response.body = JSON.stringify(res.map((search) => search[1]));
+    context.response.body = JSON.stringify(res.map((search: any) => search[1]));
   })
   .get("/sw", async (context) => {
     const query = context.request.url.searchParams.get("search");
