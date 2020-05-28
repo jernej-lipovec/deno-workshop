@@ -14,12 +14,12 @@ We will create a simple REST API, that will be able to accept parameters, call e
 
 ------ 
 
-Database structure:
-table "searches":
-id INTEGER PRIMARY KEY
-date INTEGER NOT NULL
-query TEXT NOT NULL
+Database structure:   
+table "searches":  
+id INTEGER PRIMARY KEY  
+date INTEGER NOT NULL  
+query TEXT NOT NULL   
 
-sample query:
-db.query("SELECT query FROM searches")
-db.query("INSERT INTO searches (query, date) VALUES (?, date('now'))", ["Luke"])
+sample query:  
+db.query("SELECT query FROM searches")  
+db.query("INSERT INTO searches (query, date) VALUES (?, date('now'))", ["Luke"])  
